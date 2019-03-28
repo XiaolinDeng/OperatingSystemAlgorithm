@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Os.dir/fileinput.c.o CMakeFiles/Os.dir/FCFS.c.o  -o Os 
