@@ -8,5 +8,5 @@ add_executable(Os
 #        main.c
 #        minitest.c
 #        testfunc.c
-
-        fileinput.c FCFS.c)
+#        fileinput.c
+        FCFS.c)

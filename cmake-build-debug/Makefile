@@ -150,33 +150,6 @@ FCFS.c.s:
 	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/FCFS.c.s
 .PHONY : FCFS.c.s
 
-fileinput.o: fileinput.c.o
-
-.PHONY : fileinput.o
-
-# target to build an object file
-fileinput.c.o:
-	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/fileinput.c.o
-.PHONY : fileinput.c.o
-
-fileinput.i: fileinput.c.i
-
-.PHONY : fileinput.i
-
-# target to preprocess a source file
-fileinput.c.i:
-	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/fileinput.c.i
-.PHONY : fileinput.c.i
-
-fileinput.s: fileinput.c.s
-
-.PHONY : fileinput.s
-
-# target to generate assembly for a file
-fileinput.c.s:
-	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/fileinput.c.s
-.PHONY : fileinput.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +162,6 @@ help:
 	@echo "... FCFS.o"
 	@echo "... FCFS.i"
 	@echo "... FCFS.s"
-	@echo "... fileinput.o"
-	@echo "... fileinput.i"
-	@echo "... fileinput.s"
 .PHONY : help
 
 

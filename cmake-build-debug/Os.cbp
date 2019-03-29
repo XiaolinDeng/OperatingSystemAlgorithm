@@ -87,9 +87,6 @@
 		<Unit filename="/home/dxl/桌面/Os/FCFS.c">
 			<Option target="Os"/>
 		</Unit>
-		<Unit filename="/home/dxl/桌面/Os/fileinput.c">
-			<Option target="Os"/>
-		</Unit>
 		<Unit filename="/home/dxl/桌面/Os/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

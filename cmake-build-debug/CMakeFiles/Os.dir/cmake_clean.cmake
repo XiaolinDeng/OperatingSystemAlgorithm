@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Os.dir/fileinput.c.o"
   "CMakeFiles/Os.dir/FCFS.c.o"
   "Os.pdb"
   "Os"

@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/dxl/桌面/Os/fileinput.c
-stdio.h
--
+/home/dxl/桌面/Os/FCFS.c
 stdlib.h
 -
-stdio.h
--
 string.h
+-
+bits/types/FILE.h
+-
+stdio.h
 -
 

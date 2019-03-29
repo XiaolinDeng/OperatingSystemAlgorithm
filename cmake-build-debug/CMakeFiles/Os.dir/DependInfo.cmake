@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/dxl/桌面/Os/FCFS.c" "/home/dxl/桌面/Os/cmake-build-debug/CMakeFiles/Os.dir/FCFS.c.o"
-  "/home/dxl/桌面/Os/fileinput.c" "/home/dxl/桌面/Os/cmake-build-debug/CMakeFiles/Os.dir/fileinput.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
