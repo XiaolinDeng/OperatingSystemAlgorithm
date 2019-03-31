@@ -58,7 +58,7 @@ linknode genlist(linknode head)
     if(!fin)
     {
         printf("Can't find file");
-        head = NULL;
+        free(head);
         return NULL;
     }
     while(!feof(fin))
