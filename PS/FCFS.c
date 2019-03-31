@@ -54,7 +54,7 @@ linknode genlist(linknode head)
     head = (linknode)malloc(sizeof(linklist));
     p = head;
     p->next = NULL;
-    fin = fopen("test.txt","r");
+    fin = fopen("FCFS.txt","r");
     if(!fin)
     {
         printf("Can't find file");

@@ -10,4 +10,5 @@ add_executable(Os
 #        testfunc.c
 #        fileinput.c
 #        PS/FCFS.c
-        PS/PRIORITY.c)
+        PS/PRIORITY.c
+        )
