@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/dxl/桌面/Os/cmake-build-debug"/>
+				<Option working_dir="/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/dxl/桌面/Os/cmake-build-debug"/>
+				<Option working_dir="/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Os">
-				<Option output="/home/dxl/桌面/Os/cmake-build-debug/Os" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dxl/桌面/Os/cmake-build-debug"/>
+				<Option output="/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Os" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 Os"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 Os"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Os/fast">
-				<Option output="/home/dxl/桌面/Os/cmake-build-debug/Os" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dxl/桌面/Os/cmake-build-debug"/>
+				<Option output="/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Os" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,27 +67,27 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 Os/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 Os/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/dxl/桌面/Os/cmake-build-debug"/>
+				<Option working_dir="/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dxl/桌面/Os/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dxl/桌面/Os/PS/PRIORITY.c">
+		<Unit filename="/home/dxl/CLionProjects/OperatingSystemAlgorithm/PS/PRIORITY.c">
 			<Option target="Os"/>
 		</Unit>
-		<Unit filename="/home/dxl/桌面/Os/CMakeLists.txt">
+		<Unit filename="/home/dxl/CLionProjects/OperatingSystemAlgorithm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
