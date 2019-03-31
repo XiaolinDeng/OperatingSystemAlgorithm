@@ -123,32 +123,32 @@ Os/fast:
 	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/build
 .PHONY : Os/fast
 
-FCFS.o: FCFS.c.o
+PS/PRIORITY.o: PS/PRIORITY.c.o
 
-.PHONY : FCFS.o
+.PHONY : PS/PRIORITY.o
 
 # target to build an object file
-FCFS.c.o:
-	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/FCFS.c.o
-.PHONY : FCFS.c.o
+PS/PRIORITY.c.o:
+	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/PS/PRIORITY.c.o
+.PHONY : PS/PRIORITY.c.o
 
-FCFS.i: FCFS.c.i
+PS/PRIORITY.i: PS/PRIORITY.c.i
 
-.PHONY : FCFS.i
+.PHONY : PS/PRIORITY.i
 
 # target to preprocess a source file
-FCFS.c.i:
-	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/FCFS.c.i
-.PHONY : FCFS.c.i
+PS/PRIORITY.c.i:
+	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/PS/PRIORITY.c.i
+.PHONY : PS/PRIORITY.c.i
 
-FCFS.s: FCFS.c.s
+PS/PRIORITY.s: PS/PRIORITY.c.s
 
-.PHONY : FCFS.s
+.PHONY : PS/PRIORITY.s
 
 # target to generate assembly for a file
-FCFS.c.s:
-	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/FCFS.c.s
-.PHONY : FCFS.c.s
+PS/PRIORITY.c.s:
+	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/PS/PRIORITY.c.s
+.PHONY : PS/PRIORITY.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Os"
 	@echo "... edit_cache"
-	@echo "... FCFS.o"
-	@echo "... FCFS.i"
-	@echo "... FCFS.s"
+	@echo "... PS/PRIORITY.o"
+	@echo "... PS/PRIORITY.i"
+	@echo "... PS/PRIORITY.s"
 .PHONY : help
 
 

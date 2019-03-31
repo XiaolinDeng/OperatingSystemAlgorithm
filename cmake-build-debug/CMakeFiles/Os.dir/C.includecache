@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/dxl/桌面/Os/FCFS.c
+/home/dxl/桌面/Os/PS/FCFS.c
 stdlib.h
 -
 string.h

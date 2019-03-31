@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dxl/桌面/Os/FCFS.c">
+		<Unit filename="/home/dxl/桌面/Os/PS/PRIORITY.c">
 			<Option target="Os"/>
 		</Unit>
 		<Unit filename="/home/dxl/桌面/Os/CMakeLists.txt">

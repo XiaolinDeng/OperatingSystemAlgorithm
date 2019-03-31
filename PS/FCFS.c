@@ -118,7 +118,7 @@ linknode genlist(linknode head)
     p = head->next;
     while(p)
     {
-        printf("\n id  =  %d    %s   %d  %d    %d    %d      ",
+        printf(" id  =  %d    %s   %d  %d    %d    %d      \n",
                 p->id,p->name,p->arrive.hour,p->arrive.min,
                 p->execute.hour,p->execute.min);
         p = p->next;
@@ -129,31 +129,48 @@ linknode genlist(linknode head)
 void FCFS(linknode head)
 {
     //// Need check where time is wrong!!!!
+    head = head->next;
     time system;
     system = head->arrive;
     linknode p = head;
+    float avgCycle = 0;
+    float avgRatio = 0;
+    float counter = 0;
     while(p) {
         if (system.value <= p->arrive.value) {
             system = p->arrive;
         } else if (system.value > p->arrive.value) {
         }
         p->start = system;
-        p->finish.hour = p->start.hour + system.hour;
-        p->finish.min = p->start.min + system.min;
+        p->finish.hour = p->start.hour + p->execute.hour;
+        p->finish.min = p->start.min + p->execute.min;
         timecheck(&p->finish);
 
         p->cycling = p->finish.value - p->arrive.value;
         p->ratio = (float) p->cycling / p->execute.value;
         system = p->finish;
-        printf("\nid=%d\tname=%s\tah=%d\tam=%d\tzh=%d\tzm=%d\t\n",
+        printf("id=%d\tname=%s\tStart = %d:%d\tFinish = %d:%d\t Cycle = %d\tRatio=%f\n",
                p->id,
                p->name,
                p->start.hour,
                p->start.min,
                p->finish.hour,
-               p->finish.min);
+               p->finish.min,
+               p->cycling,
+               p->ratio);
         p=p->next;
     }
+    p = head;
+    while(p)
+    {
+        avgCycle += (float) p->cycling;
+        avgRatio += (float) p->ratio;
+        counter++;
+        p = p->next;
+    }
+    avgCycle /= counter;
+    avgRatio /= counter;
+    printf("Average cycling time is %f ,Average Ratio is %f",avgCycle,avgRatio);
 }
 
 

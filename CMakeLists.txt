@@ -3,10 +3,11 @@ project(Os)
 
 set(CMAKE_C_STANDARD 99)
 
-set(CMAKE_C_SOURCE_FILE_EXTENSIONS main.c testfunc.c minitest.c)
+set(CMAKE_C_SOURCE_FILE_EXTENSIONS main.c)
 add_executable(Os
 #        main.c
 #        minitest.c
 #        testfunc.c
 #        fileinput.c
-        FCFS.c)
+#        PS/FCFS.c
+        PS/PRIORITY.c)
