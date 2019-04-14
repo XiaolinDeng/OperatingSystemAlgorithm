@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dxl/CLionProjects/OperatingSystemAlgorithm/PS/PRIORITY.c">
+		<Unit filename="/home/dxl/CLionProjects/OperatingSystemAlgorithm/Banker.c">
 			<Option target="Os"/>
 		</Unit>
 		<Unit filename="/home/dxl/CLionProjects/OperatingSystemAlgorithm/CMakeLists.txt">

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Os.dir/PS/PRIORITY.c.o"
+  "CMakeFiles/Os.dir/Banker.c.o"
   "Os.pdb"
   "Os"
 )

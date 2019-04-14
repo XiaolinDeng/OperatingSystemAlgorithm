@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -123,32 +123,32 @@ Os/fast:
 	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/build
 .PHONY : Os/fast
 
-PS/PRIORITY.o: PS/PRIORITY.c.o
+Banker.o: Banker.c.o
 
-.PHONY : PS/PRIORITY.o
+.PHONY : Banker.o
 
 # target to build an object file
-PS/PRIORITY.c.o:
-	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/PS/PRIORITY.c.o
-.PHONY : PS/PRIORITY.c.o
+Banker.c.o:
+	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/Banker.c.o
+.PHONY : Banker.c.o
 
-PS/PRIORITY.i: PS/PRIORITY.c.i
+Banker.i: Banker.c.i
 
-.PHONY : PS/PRIORITY.i
+.PHONY : Banker.i
 
 # target to preprocess a source file
-PS/PRIORITY.c.i:
-	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/PS/PRIORITY.c.i
-.PHONY : PS/PRIORITY.c.i
+Banker.c.i:
+	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/Banker.c.i
+.PHONY : Banker.c.i
 
-PS/PRIORITY.s: PS/PRIORITY.c.s
+Banker.s: Banker.c.s
 
-.PHONY : PS/PRIORITY.s
+.PHONY : Banker.s
 
 # target to generate assembly for a file
-PS/PRIORITY.c.s:
-	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/PS/PRIORITY.c.s
-.PHONY : PS/PRIORITY.c.s
+Banker.c.s:
+	$(MAKE) -f CMakeFiles/Os.dir/build.make CMakeFiles/Os.dir/Banker.c.s
+.PHONY : Banker.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Os"
 	@echo "... edit_cache"
-	@echo "... PS/PRIORITY.o"
-	@echo "... PS/PRIORITY.i"
-	@echo "... PS/PRIORITY.s"
+	@echo "... Banker.o"
+	@echo "... Banker.i"
+	@echo "... Banker.s"
 .PHONY : help
 
 

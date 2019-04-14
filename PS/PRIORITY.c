@@ -46,6 +46,47 @@ void timecheck(time *t)
     }
     t->value = t->hour * 60 + t->min;
 }
+void dispatch(linknode head,linknode wait) //// Used to make queue in wait.
+{
+    if (!head) return ;
+    if (head)
+    {
+        if(wait)
+        {
+            wait->next = head;
+        }
+        else if (!wait)
+        {
+            return;
+        }
+    }
+}
+
+void proces(linknode wait,linknode process) //// Used to meke wait into process.
+{
+    linknode pre = wait;
+
+    if(!wait->next)
+    {
+        process = wait;
+        return;
+    }
+
+    pre = wait;
+    wait = wait->next;
+
+
+    while(wait)
+    {
+        if(wait->priority>process->priority)
+        {
+            process = wait;
+
+        }
+        wait = wait->next;
+    }
+}
+
 
 linknode genlist(linknode head)
 {
@@ -84,7 +125,7 @@ linknode genlist(linknode head)
         cc = strtok(NULL," \t\r\n");
         l->arrive.min = atoi(cc);
 
-        cc = strtok(NULL, "\t\r\n");
+        cc = strtok(NULL, " \t\r\n");
         l->execute.hour = atoi(cc);
 
         cc = strtok(NULL, " \t\r\n");
@@ -128,10 +169,45 @@ linknode genlist(linknode head)
     return head;
 }
 
+void PRI(linknode head)
+{
+    linknode wait=NULL,process=NULL; //// wait queue and process pointer
+    linknode p;
+    time system;
+    ////First enter the input,and judge where to go;
+    p = head->next;
+    system = head->next->arrive;
+    while(1)
+    {
+        if(p&&wait)
+        {
+            if(p->arrive.value < wait->arrive.value)
+            {
+                dispatch(p,wait);
+                p=p->next;
+            }
+            else
+            {
+                proces(wait,process);
+            }
+        }
+        wait = head;
+        if (!p&&!wait) break;
+    }
+
+
+
+    // Judge enter wait or just process;
+}
+
+
+
 int main()
 {
     pc head;
     genlist(&head);
+    PRI(&head);
+    return 0;
 }
 
 

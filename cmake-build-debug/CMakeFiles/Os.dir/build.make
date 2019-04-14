@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/dxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -57,27 +57,27 @@ include CMakeFiles/Os.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Os.dir/flags.make
 
-CMakeFiles/Os.dir/PS/PRIORITY.c.o: CMakeFiles/Os.dir/flags.make
-CMakeFiles/Os.dir/PS/PRIORITY.c.o: ../PS/PRIORITY.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Os.dir/PS/PRIORITY.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Os.dir/PS/PRIORITY.c.o   -c /home/dxl/CLionProjects/OperatingSystemAlgorithm/PS/PRIORITY.c
+CMakeFiles/Os.dir/Banker.c.o: CMakeFiles/Os.dir/flags.make
+CMakeFiles/Os.dir/Banker.c.o: ../Banker.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Os.dir/Banker.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Os.dir/Banker.c.o   -c /home/dxl/CLionProjects/OperatingSystemAlgorithm/Banker.c
 
-CMakeFiles/Os.dir/PS/PRIORITY.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Os.dir/PS/PRIORITY.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dxl/CLionProjects/OperatingSystemAlgorithm/PS/PRIORITY.c > CMakeFiles/Os.dir/PS/PRIORITY.c.i
+CMakeFiles/Os.dir/Banker.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Os.dir/Banker.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dxl/CLionProjects/OperatingSystemAlgorithm/Banker.c > CMakeFiles/Os.dir/Banker.c.i
 
-CMakeFiles/Os.dir/PS/PRIORITY.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Os.dir/PS/PRIORITY.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dxl/CLionProjects/OperatingSystemAlgorithm/PS/PRIORITY.c -o CMakeFiles/Os.dir/PS/PRIORITY.c.s
+CMakeFiles/Os.dir/Banker.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Os.dir/Banker.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dxl/CLionProjects/OperatingSystemAlgorithm/Banker.c -o CMakeFiles/Os.dir/Banker.c.s
 
 # Object files for target Os
 Os_OBJECTS = \
-"CMakeFiles/Os.dir/PS/PRIORITY.c.o"
+"CMakeFiles/Os.dir/Banker.c.o"
 
 # External object files for target Os
 Os_EXTERNAL_OBJECTS =
 
-Os: CMakeFiles/Os.dir/PS/PRIORITY.c.o
+Os: CMakeFiles/Os.dir/Banker.c.o
 Os: CMakeFiles/Os.dir/build.make
 Os: CMakeFiles/Os.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dxl/CLionProjects/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable Os"
