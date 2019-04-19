@@ -1,92 +1,37 @@
 //
-// Created by dxl on 19-3-31.
+// Created by dxl on 19-3-28.
 //
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
-typedef struct t
+#include <stdio.h>
+#include "MyTime.h"
+typedef struct node
 {
-    int hour;
-    int min;
-    int value;
-
-}time;
-
-typedef struct process
-{
-    char name[20];
-    struct process* next;
+    int id;
     int priority;
+    char name[20];
     time arrive;
     time execute;
     time start;
     time finish;
     int cycling;
     float ratio;
-    int id;
+    struct  node* next;
+}linklist;
 
-} pc;
-typedef pc* linknode;
-
-
-void timecheck(time *t)
-{
-    while(t->min>=60||t->min<0)
+typedef linklist* linknode;
+void listprint(linknode head){
+    linknode p;
+    p = head->next;
+    while(p)
     {
-        if(t->min>=60)
-        {
-            t->min -= 60;
-            t->hour ++;
-        }
-        else
-        {
-            t->min +=60;
-            t->hour --;
-        }
+        printf(" id  =  %d  %d  %s   %d  %d    %d    %d      \n",
+               p->id,p->priority,p->name,p->arrive.hour,p->arrive.min,
+               p->execute.hour,p->execute.min);
+        p = p->next;
     }
-    t->value = t->hour * 60 + t->min;
+
 }
-void dispatch(linknode head,linknode wait) //// Used to make queue in wait.
-{
-    if (!head) return ;
-    if (head)
-    {
-        if(wait)
-        {
-            wait->next = head;
-        }
-        else if (!wait)
-        {
-            return;
-        }
-    }
-}
-
-void proces(linknode wait,linknode process) //// Used to meke wait into process.
-{
-    linknode pre = wait;
-
-    if(!wait->next)
-    {
-        process = wait;
-        return;
-    }
-
-    pre = wait;
-    wait = wait->next;
-
-
-    while(wait)
-    {
-        if(wait->priority>process->priority)
-        {
-            process = wait;
-
-        }
-        wait = wait->next;
-    }
-}
-
 
 linknode genlist(linknode head)
 {
@@ -94,45 +39,48 @@ linknode genlist(linknode head)
     FILE *fin;
     char *cc;
     linknode p,q,l;
-    head = (linknode)malloc(sizeof(struct process));
+    head = (linknode)malloc(sizeof(linklist));
     p = head;
     p->next = NULL;
     fin = fopen("PRI.txt","r");
-    if (!fin)
+    if(!fin)
     {
-        printf("File not finded!");
+        printf("Can't find file");
         free(head);
         return NULL;
     }
     while(!feof(fin))
     {
         fgets(buf,100000,fin);
-        cc = strtok(buf," \r\n\t");
+
+        cc = strtok(buf, " \r\t\n");
+
         if (strcmp(cc,"-1")==0) break;
-        l = (linknode)malloc(sizeof(pc));
+        l = (linknode)malloc(sizeof(linklist));
         l->next = NULL;
         l->id = atoi(cc);
 
-        cc = strtok(NULL," \t\r\n");
-        l->priority = atoi(cc);
+        cc = strtok(NULL, " \r\t\n");
+        l->priority =atoi(cc);
 
-        cc = strtok(NULL," \t\r\n");
+        cc = strtok(NULL, " \r\t\n");
         strcpy(l->name,cc);
 
-        cc = strtok(NULL," \t\r\n");
+        cc = strtok(NULL, " \r\n\t");
         l->arrive.hour = atoi(cc);
 
-        cc = strtok(NULL," \t\r\n");
+        cc = strtok(NULL, " \r\n\t");
         l->arrive.min = atoi(cc);
+        timecheck(&l->arrive);
 
-        cc = strtok(NULL, " \t\r\n");
+        cc = strtok(NULL," \t\r\n");
         l->execute.hour = atoi(cc);
 
-        cc = strtok(NULL, " \t\r\n");
+        cc = strtok(NULL," \r\t\n");
         l->execute.min = atoi(cc);
 
         timecheck(&l->arrive);
-        timecheck(&l->arrive);
+        timecheck(&l->execute);
 
         p = head;
         while(p->next)
@@ -158,57 +106,84 @@ linknode genlist(linknode head)
             l->next = NULL;
         }
     }
-    p = head->next;
-    while(p)
-    {
-        printf(" id  =  %d    %s   %d  %d    %d    %d      \n",
-               p->id,p->name,p->arrive.hour,p->arrive.min,
-               p->execute.hour,p->execute.min);
-        p = p->next;
-    }
+    listprint(head);
     return head;
-}
+};
 
-void PRI(linknode head)
-{
-    linknode wait=NULL,process=NULL; //// wait queue and process pointer
-    linknode p;
-    time system;
-    ////First enter the input,and judge where to go;
-    p = head->next;
-    system = head->next->arrive;
-    while(1)
-    {
-        if(p&&wait)
-        {
-            if(p->arrive.value < wait->arrive.value)
-            {
-                dispatch(p,wait);
-                p=p->next;
-            }
-            else
-            {
-                proces(wait,process);
+
+//void FCFS(linknode head)
+//{
+//    //// Need check where time is wrong!!!!
+//    head = head->next;
+//    time system;
+//    system = head->arrive;
+//    linknode p = head;
+//    float avgCycle = 0;
+//    float avgRatio = 0;
+//    float counter = 0;
+//    while(p) {
+//        if (system.value <= p->arrive.value) {
+//            system = p->arrive;
+//        } else if (system.value > p->arrive.value) {
+//        }
+//        p->start = system;
+//        p->finish.hour = p->start.hour + p->execute.hour;
+//        p->finish.min = p->start.min + p->execute.min;
+//        timecheck(&p->finish);
+//
+//        p->cycling = p->finish.value - p->arrive.value;
+//        p->ratio = (float) p->cycling / p->execute.value;
+//        system = p->finish;
+//        printf("id=%d\tname=%s\tStart = %d:%d\tFinish = %d:%d\t Cycle = %d\tRatio=%.2f\n",
+//               p->id,
+//               p->name,
+//               p->start.hour,
+//               p->start.min,
+//               p->finish.hour,
+//               p->finish.min,
+//               p->cycling,
+//               p->ratio);
+//        p=p->next;
+//    }
+//    p = head;
+//    while(p)
+//    {
+//        avgCycle += (float) p->cycling;
+//        avgRatio += (float) p->ratio;
+//        counter++;
+//        p = p->next;
+//    }
+//    avgCycle /= counter;
+//    avgRatio /= counter;
+//    printf("Average cycling time is %.2f ,Average Ratio is %.2f",avgCycle,avgRatio);
+//}
+
+void PRIORITY(linknode head){
+    linknode wait;
+    time systime;
+    systime = head->next->arrive;
+    linknode p =head->next;
+    float avgcycle = 0;
+    float acgratio = 0;
+    float processcounter = 0;
+    while(p){
+        if(!wait){
+            if(systime.value < p->arrive.value){
+                systime = p->arrive;
             }
         }
-        wait = head;
-        if (!p&&!wait) break;
     }
-
-
-
-    // Judge enter wait or just process;
 }
 
-
-
-int main()
+int main ()
 {
-    pc head;
-    genlist(&head);
-    PRI(&head);
+    linklist p ;
+    linknode q;
+    q=genlist(&p);
+//    PRIORITY(q);
     return 0;
 }
+
 
 
 

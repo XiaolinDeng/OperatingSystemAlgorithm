@@ -3,16 +3,8 @@
 //
 #include <stdlib.h>
 #include <string.h>
-#include <bits/types/FILE.h>
 #include <stdio.h>
-
-typedef struct data
-{
-    int hour;
-    int min;
-    int value;
-}time;
-
+#include "MyTime.h"
 typedef struct node
 {
     int id;
@@ -28,23 +20,17 @@ typedef struct node
 
 typedef linklist* linknode;
 
-void timecheck(time *t)
-{
-    while(t->min>=60||t->min<0)
-    {
-        if(t->min>=60)
-        {
-            t->min -= 60;
-            t->hour ++;
-        }
-        else
-        {
-            t->min +=60;
-            t->hour --;
-        }
+void listprint(linknode head){
+    linknode p;
+    p = head->next;
+    while(p) {
+        printf(" id  =  %d    %s   %d  %d    %d    %d      \n",
+               p->id, p->name, p->arrive.hour, p->arrive.min,
+               p->execute.hour, p->execute.min);
+        p = p->next;
     }
-    t->value = t->hour * 60 + t->min;
 }
+
 linknode genlist(linknode head)
 {
     char buf[100000];
@@ -107,7 +93,6 @@ linknode genlist(linknode head)
                 l->next = q;
                 break;
             }
-
         }
         if(!p->next)
         {
@@ -115,14 +100,7 @@ linknode genlist(linknode head)
             l->next = NULL;
         }
     }
-    p = head->next;
-    while(p)
-    {
-        printf(" id  =  %d    %s   %d  %d    %d    %d      \n",
-                p->id,p->name,p->arrive.hour,p->arrive.min,
-                p->execute.hour,p->execute.min);
-        p = p->next;
-    }
+    listprint(head);
     return head;
 };
 
@@ -149,7 +127,7 @@ void FCFS(linknode head)
         p->cycling = p->finish.value - p->arrive.value;
         p->ratio = (float) p->cycling / p->execute.value;
         system = p->finish;
-        printf("id=%d\tname=%s\tStart = %d:%d\tFinish = %d:%d\t Cycle = %d\tRatio=%f\n",
+        printf("id=%d\tname=%s\tStart = %d:%d\tFinish = %d:%d\t Cycle = %.2d\tRatio=%.2f\n",
                p->id,
                p->name,
                p->start.hour,
@@ -170,7 +148,7 @@ void FCFS(linknode head)
     }
     avgCycle /= counter;
     avgRatio /= counter;
-    printf("Average cycling time is %f ,Average Ratio is %f",avgCycle,avgRatio);
+    printf("Average cycling time is %.2f ,Average Ratio is %.2f",avgCycle,avgRatio);
 }
 
 

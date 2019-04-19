@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Os.dir/Banker.c.o"
+  "CMakeFiles/Os.dir/PS/PRIORITY.c.obj"
   "Os.pdb"
-  "Os"
+  "Os.exe"
+  "Os.exe.manifest"
+  "libOs.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
