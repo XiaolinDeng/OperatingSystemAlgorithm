@@ -1,6 +1,6 @@
-C:\Users\E\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7141.37\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\E\Desktop\OperatingSystemAlgorithm
--- The C compiler identification is GNU 8.2.0
--- The CXX compiler identification is GNU 8.2.0
+C:\Users\xiaolin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.6707.69\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\xiaolin\Desktop\ClionProject\OperatingSystemAlgorithm
+-- The C compiler identification is GNU 6.3.0
+-- The CXX compiler identification is GNU 6.3.0
 -- Check for working C compiler: C:/MinGW/bin/gcc.exe
 -- Check for working C compiler: C:/MinGW/bin/gcc.exe -- works
 -- Detecting C compiler ABI info
@@ -15,4 +15,4 @@ C:\Users\E\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7141.37\bin\cmake
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/E/Desktop/OperatingSystemAlgorithm/cmake-build-debug
+-- Build files have been written to: C:/Users/xiaolin/Desktop/ClionProject/OperatingSystemAlgorithm/cmake-build-debug

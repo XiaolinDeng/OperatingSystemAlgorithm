@@ -36,6 +36,7 @@ void inputMax(int max[][5],int pronum,int resnum){
         }
     }
 }
+bool chkmax(int max[][5],int )
 
 
 int main(){
@@ -59,6 +60,10 @@ int main(){
     printf("Please input the number of process number:");
     scanf("%d",&proNum);
     initBanker(avalable,resNum);
+    inputMax(max,proNum,resNum);
+    while(true){
+
+    }
 
     return 0;
 }

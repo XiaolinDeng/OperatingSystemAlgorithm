@@ -1,3 +1,3 @@
-C:/Users/E/Desktop/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles/Os.dir
-C:/Users/E/Desktop/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/E/Desktop/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/xiaolin/Desktop/ClionProject/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles/Os.dir
+C:/Users/xiaolin/Desktop/ClionProject/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/xiaolin/Desktop/ClionProject/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
