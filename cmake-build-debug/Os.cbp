@@ -80,10 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/E/Desktop/OperatingSystemAlgorithm/PS/MyTime.h">
-			<Option target="Os"/>
-		</Unit>
-		<Unit filename="C:/Users/E/Desktop/OperatingSystemAlgorithm/PS/PRIORITY.c">
+		<Unit filename="C:/Users/E/Desktop/OperatingSystemAlgorithm/Banker_@.c">
 			<Option target="Os"/>
 		</Unit>
 		<Unit filename="C:/Users/E/Desktop/OperatingSystemAlgorithm/CMakeLists.txt">

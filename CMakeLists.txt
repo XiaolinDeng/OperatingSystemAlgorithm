@@ -9,8 +9,10 @@ add_executable(Os
 #        minitest.c
 #        testfunc.c
 #        fileinput.c
-        PS/PRIORITY.c
-        PS/MyTime.h
+#        PS/PRIORITY.c
+#        PS/MyTime.h
 #        PS/FCFS.c
 #        Banker.c
+        Banker_@.c
+#        a2d.c
         )

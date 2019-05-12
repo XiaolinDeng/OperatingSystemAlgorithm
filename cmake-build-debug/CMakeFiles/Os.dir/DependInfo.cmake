@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/E/Desktop/OperatingSystemAlgorithm/PS/PRIORITY.c" "C:/Users/E/Desktop/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles/Os.dir/PS/PRIORITY.c.obj"
+  "C:/Users/E/Desktop/OperatingSystemAlgorithm/Banker_@.c" "C:/Users/E/Desktop/OperatingSystemAlgorithm/cmake-build-debug/CMakeFiles/Os.dir/Banker_@.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
