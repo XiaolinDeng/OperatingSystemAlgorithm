@@ -15,4 +15,5 @@ add_executable(Os
 #        Banker.c
         Banker_@.c
 #        a2d.c
+#        findsafeTest.c
         )

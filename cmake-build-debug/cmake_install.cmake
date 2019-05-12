@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/xiaolin/Desktop/ClionProject/OperatingSystemAlgorithm
+# Install script for directory: C:/Users/E/Desktop/OperatingSystemAlgorithm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/xiaolin/Desktop/ClionProject/OperatingSystemAlgorithm/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/E/Desktop/OperatingSystemAlgorithm/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

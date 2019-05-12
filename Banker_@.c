@@ -37,36 +37,36 @@ bool findSafe(int **processesAllocate, int **processNeed, int *bankResources, in
     flag1 = true;
     flag2 = false;
     int satisfiedProcess;
-    int processWhisle=0;
+    int processWhisle = 0;
     int simulateBankResources[resourcesNumber];
     for (int i = 0; i < resourcesNumber; ++i) {
         simulateBankResources[i] = bankResources[i];
     }
-while (processWhisle<processesNumber) {
-    for (int j = 0; j < processesNumber; ++j) {
-        for (int i = 0; i < resourcesNumber; ++i) {
+    while (processWhisle < processesNumber) {
+        for (int j = 0; j < processesNumber; ++j) {
+            for (int i = 0; i < resourcesNumber; ++i) {
 //            Only all resources satisfied can make one process finish.
-            if (processNeed[j][i] > bankResources[i]) {
-                flag1 = false;
-                continue;
+                if (processNeed[j][i] > bankResources[i]) {
+                    flag1 = false;
+                    continue;
+                }
+            }
+//        One can finish, means have resources return
+            if (flag1) {
+                flag2 = true;
+                satisfiedProcess = j;
             }
         }
-//        One can finish, means have resources return
-        if (flag1) {
-            flag2 = true;
-            satisfiedProcess = j;
-        }
-    }
 //    Case: No processes can satisfied resources, handle failed.
-    if (flag2) return false;
+        if (flag2) return false;
 
-    for (int k = 0; k < resourcesNumber; ++k) {
-        simulateBankResources[k] += processesAllocate[satisfiedProcess][k];
+        for (int k = 0; k < resourcesNumber; ++k) {
+            simulateBankResources[k] += processesAllocate[satisfiedProcess][k];
+        }
+        processesNumber--;
+        safeSequence[processWhisle] = satisfiedProcess;
+        processWhisle++;
     }
-    processesNumber--;
-    safeSequence[processWhisle] = satisfiedProcess;
-    processWhisle++;
-}
 
 
 }
@@ -119,7 +119,7 @@ int main() {
             scanf("%d", &processesMax[i][j]);
         }
 //        check if processesmax is legal
-        while (checkMax(processesMax[i], bankAvailable, resourcesNumber)) {
+        while (!checkMax(processesMax[i], bankAvailable, resourcesNumber)) {
             printf("Max input not legal please input again\n");
             for (int j = 0; j < resourcesNumber; ++j) {
                 scanf("%d", &processesMax[i][j]);
@@ -127,16 +127,18 @@ int main() {
         }
     }
 //    todo this filed need input resources first request and judge safe sequences
-    printf("Please input %d processes\Kn:", processesNumber);
+    printf("Please input %d processes:\n", processesNumber);
     for (int i = 0; i < processesNumber; ++i) {
         for (int j = 0; j < resourcesNumber; ++j) {
             scanf("%d", &processesAllocate[i][j]);
+            processesNeed[i][j] = processesMax[i][j] - processesAllocate[i][j];
         }
-
     }
 
-
-return 0;
+    printf("\nd\n");
+    scanf("%s",resourcesNumber);
+    scanf("%d",resourcesNumber);
+    return 0;
 
 }
 
