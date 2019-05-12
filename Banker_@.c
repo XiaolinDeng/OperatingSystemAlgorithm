@@ -31,6 +31,46 @@ int **init2dArray(int processesNumber, int resourcesNumber) {
     return array;
 }
 
+bool findSafe(int **processesAllocate, int **processNeed, int *bankResources, int *safeSequence, int resourcesNumber,
+              int processesNumber) {
+    bool flag1, flag2;
+    flag1 = true;
+    flag2 = false;
+    int satisfiedProcess;
+    int processWhisle=0;
+    int simulateBankResources[resourcesNumber];
+    for (int i = 0; i < resourcesNumber; ++i) {
+        simulateBankResources[i] = bankResources[i];
+    }
+while (processWhisle<processesNumber) {
+    for (int j = 0; j < processesNumber; ++j) {
+        for (int i = 0; i < resourcesNumber; ++i) {
+//            Only all resources satisfied can make one process finish.
+            if (processNeed[j][i] > bankResources[i]) {
+                flag1 = false;
+                continue;
+            }
+        }
+//        One can finish, means have resources return
+        if (flag1) {
+            flag2 = true;
+            satisfiedProcess = j;
+        }
+    }
+//    Case: No processes can satisfied resources, handle failed.
+    if (flag2) return false;
+
+    for (int k = 0; k < resourcesNumber; ++k) {
+        simulateBankResources[k] += processesAllocate[satisfiedProcess][k];
+    }
+    processesNumber--;
+    safeSequence[processWhisle] = satisfiedProcess;
+    processWhisle++;
+}
+
+
+}
+
 bool checkMax(int check[], int standard[], int len) {
     bool legal = true;
     for (int i = 0; i < len; ++i) {
@@ -54,6 +94,7 @@ int main() {
 
 //    Initialize array used in process.
     int bankAvailable[resourcesNumber];
+    int safeSequence[processesNumber];
     bool processesFinish[processesNumber];
     int **processesNeed;
     int **processesMax;
@@ -85,12 +126,17 @@ int main() {
             }
         }
     }
-    printf("Please input %d processes\Kn:",processesNumber);
-    for (int l = 0; l < ; ++l) {
-        
+//    todo this filed need input resources first request and judge safe sequences
+    printf("Please input %d processes\Kn:", processesNumber);
+    for (int i = 0; i < processesNumber; ++i) {
+        for (int j = 0; j < resourcesNumber; ++j) {
+            scanf("%d", &processesAllocate[i][j]);
+        }
+
     }
 
-    return 0;
+
+return 0;
 
 }
 
