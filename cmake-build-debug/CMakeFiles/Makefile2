@@ -49,19 +49,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\E\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7141.37\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = C:\Users\xiaolin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7141.37\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Users\E\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7141.37\bin\cmake\win\bin\cmake.exe -E remove -f
+RM = C:\Users\xiaolin\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7141.37\bin\cmake\win\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\E\Desktop\OperatingSystemAlgorithm
+CMAKE_SOURCE_DIR = C:\Users\xiaolin\Desktop\ClionProject\OperatingSystemAlgorithm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\E\Desktop\OperatingSystemAlgorithm\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\xiaolin\Desktop\ClionProject\OperatingSystemAlgorithm\cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/Os.dir
@@ -70,7 +70,7 @@ CMAKE_BINARY_DIR = C:\Users\E\Desktop\OperatingSystemAlgorithm\cmake-build-debug
 CMakeFiles/Os.dir/all:
 	$(MAKE) -f CMakeFiles\Os.dir\build.make CMakeFiles/Os.dir/depend
 	$(MAKE) -f CMakeFiles\Os.dir\build.make CMakeFiles/Os.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\E\Desktop\OperatingSystemAlgorithm\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target Os"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\xiaolin\Desktop\ClionProject\OperatingSystemAlgorithm\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target Os"
 .PHONY : CMakeFiles/Os.dir/all
 
 # Include target in all.
@@ -80,9 +80,9 @@ all: CMakeFiles/Os.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Os.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\E\Desktop\OperatingSystemAlgorithm\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\xiaolin\Desktop\ClionProject\OperatingSystemAlgorithm\cmake-build-debug\CMakeFiles 2
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Os.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\E\Desktop\OperatingSystemAlgorithm\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\xiaolin\Desktop\ClionProject\OperatingSystemAlgorithm\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Os.dir/rule
 
 # Convenience name for target.

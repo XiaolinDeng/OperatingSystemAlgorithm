@@ -31,6 +31,7 @@ int **init2dArray(int processesNumber, int resourcesNumber) {
     return array;
 }
 
+
 bool findSafe(int **processesAllocate, int **processNeed, int *bankResources, int *safeSequence, int resourcesNumber,
               int processesNumber) {
     bool flag1, flag2;
@@ -58,7 +59,10 @@ bool findSafe(int **processesAllocate, int **processNeed, int *bankResources, in
             }
         }
 //    Case: No processes can satisfied resources, handle failed.
-        if (flag2) return false;
+        if (!flag2) {
+            printf("No safe sequence!");
+            return false;
+        }
 
         for (int k = 0; k < resourcesNumber; ++k) {
             simulateBankResources[k] += processesAllocate[satisfiedProcess][k];
@@ -67,6 +71,11 @@ bool findSafe(int **processesAllocate, int **processNeed, int *bankResources, in
         safeSequence[processWhisle] = satisfiedProcess;
         processWhisle++;
     }
+    printf("Sequence is :");
+    for (int l = 0; l < processesNumber; ++l) {
+        printf("%d ",safeSequence[l]);
+    }
+
 
 
 }
@@ -133,6 +142,7 @@ int main() {
             scanf("%d", &processesAllocate[i][j]);
             processesNeed[i][j] = processesMax[i][j] - processesAllocate[i][j];
         }
+        findSafe(processesAllocate,processesNeed,bankAvailable,safeSequence,resourcesNumber,processesNumber);
     }
 
     printf("\nd\n");
